@@ -12,9 +12,9 @@ RUN echo 'server:vjsserverpass' | chpasswd
 RUN chown server /workdir
 RUN mkdir /home/server
 RUN chown server /home/server
+COPY . .
 RUN chmod +x run.sh
 RUN chmod +x start.sh
-COPY . .
 EXPOSE 22
 EXPOSE 8000
 EXPOSE 8080
